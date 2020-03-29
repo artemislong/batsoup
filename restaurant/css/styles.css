@@ -1,0 +1,33 @@
+body {
+	font-size: 16px;
+	color: #fff;
+	background-color: #61122f;
+	font-family: 'Oxygen', sans-serif;
+}
+#header-nav {
+	background-color: #f6b319;
+	/* prevent rounding angles*/
+	border-radius: 0;
+	border: 0;
+}
+/* adding logo picture, making it as a background for <a> tag, no-repeat so it won't repeat*/
+#Logo-img {
+	background: url('../images/bat_logo.jfif') no-repeat;
+	background-size: 150px;
+	border-radius: 75px;
+	width: 150px;
+	height: 150px;
+	margin: 10px 15px 10px 0;
+}
+#Logo-img:hover{
+	background-size: 148px;
+	border-radius: 74px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #f6b319;
+}
+#Logo-img:active{
+	border-style: solid;
+	border-width: 3px;
+	border-color: green;
+}
