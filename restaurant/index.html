@@ -9,11 +9,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Bat Soup Restaurant</title>
 		<!-- link bootstrap styling -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
 		<!-- link own styling -->
 		<link rel="stylesheet" href="css/styles.css">
 		<!-- oxygen font import -->
 		<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
 	</head>
 
 
@@ -21,15 +22,31 @@
 	<!-- page header, navigation bar -->
 	<header>
 		<nav id="header-nav" class="navbar navbar-default"> <!-- ^ for bootstrap to recognize class-->
+
 			<div class="container">
 				<!-- adding logo, making it mobile friendly with bootstrap's predefined class-->
+				<!-- logo, restaurant name, certificate,...-->
 				<div class="navbar-header">
-					<!-- make logo clickable to main page-->
-					<a href= "index.html" alt="Logo image" title="main page">
+					<!-- Logo - make logo clickable to main page 
+						add bootstrap float class + remove logo for small screens,
+						d-none: hide, d-md-block: untill reaching medium size-->
+					<a href= "index.html" class="float-left d-none d-md-block" title="main page">
 						<!-- the id is defined in styles.css-->
 						<div id="Logo-img" alt="Logo image"></div>
-
 					</a>
+					<!-- Restaurant name using bootstrap brand class  -->
+					<div class="navbar-brand">
+						<a href="index.html" >
+							<h1>Bat Soup Restaurant</h1>
+						</a>
+
+						<p>
+							<img src="images/halal_logo.jpg" alt="Halal Certification">
+							<span>Halal Certified</span>
+						</p>
+					</div>
+
+
 
 			</div>
 
