@@ -31,6 +31,7 @@ body {
 	border-width: 3px;
 	border-color: green;
 }
+/*********end of logo image customization**************/
 
 .navbar-brand { /* restaurant name and ceritificate*/
 	padding-top: 25px;
@@ -58,10 +59,122 @@ body {
 	font-weight: bold;
 
 }
-p img {/*customize image's size*/
+p img {/*customize certificates's size*/
 	
 	border-radius: 15px;
 	width: 30px;
 	height: 30px;
 	
 }
+
+
+/***************Customizing Menu************/
+
+#nav-list {
+  margin-top: 10px;
+  float: right;
+}
+
+
+#nav-list li { /* for some reason, formating <a> tag did not apply these properties*/
+  margin-top: 10px;
+  text-align: center;
+
+}
+
+#nav-list a {
+  color: #951C49;
+
+}
+
+#nav-list li a:hover {
+  background: #E7E7E7;
+}
+
+#nav-list a span { /*phone number*/
+  font-size: 1.8em;
+}
+
+
+
+#nav-list i {
+  font-size: 1.8em;
+}
+
+
+}
+#phone a { /* Phone number */
+  text-align: right;
+  padding-bottom: 0;
+}
+#phone div { /* We Deliver */
+  color: #557c3e;
+  text-align: right;
+  padding-right: 15px;
+  margin-top: -10px;
+}
+
+
+
+.navbar-header button.navbar-toggler {
+  clear: both;
+  margin-top: -30px;
+}
+/* END HEADER */ 
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+ #Logo-img {
+  	background: url('../images/bat_logo.jfif') no-repeat;
+    background-size: 100px;
+	border-radius: 50px;
+	width: 100px;
+	height: 100px;
+	margin: 5px 5px 5px 0;
+  }
+  /* End Header */
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+	
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+  .navbar-brand h1 { /* Restaurant name */
+    padding-top: 10px;
+    font-size: 5vw; /* 1vw = 1% of viewport width */
+  }
+  .navbar-brand p { /* Kosher cert */
+    font-size: .6em;
+    margin-top: 12px;
+  }
+  .navbar-brand p img { /* Star-K */
+    border-radius: 10px;
+	width: 20px;
+	height: 20px;
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a i { /* Collapsed nav menu icon */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+
+  /* End Header */
+

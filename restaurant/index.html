@@ -15,22 +15,24 @@
 		<!-- oxygen font import -->
 		<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+		<!-- icons library cuz bootstrap 4 does not have icons like BS3-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	</head>
 
 
 <body>
 	<!-- page header, navigation bar -->
 	<header>
-		<nav id="header-nav" class="navbar navbar-default"> <!-- ^ for bootstrap to recognize class-->
-
+		<!-- navbar-expand-md for responsive design, navbar-light for button design, bg-warning is background yellow color-->
+		<nav class="navbar navbar-expand-md navbar-light bg-warning"> <!-- for bootstrap to recognize class-->
 			<div class="container">
 				<!-- adding logo, making it mobile friendly with bootstrap's predefined class-->
 				<!-- logo, restaurant name, certificate,...-->
-				<div class="navbar-header">
+				<div class="navbar-header ">
 					<!-- Logo - make logo clickable to main page 
 						add bootstrap float class + remove logo for small screens,
 						d-none: hide, d-md-block: untill reaching medium size-->
-					<a href= "index.html" class="float-left d-none d-md-block" title="main page">
+					<a href= "index.html" class="float-left d-none d-lg-block" title="main page">
 						<!-- the id is defined in styles.css-->
 						<div id="Logo-img" alt="Logo image"></div>
 					</a>
@@ -46,12 +48,43 @@
 						</p>
 					</div>
 
+					<!-- MENU & DROP DOWN MENU -->
 
+					<!-- using bootstrap to make drop-down menu button-->
+					 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsable-nav" aria-controls="collapsable-nav"  aria-expanded="false" aria-label="Toggle navigation">
+    						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+					<!-- customizing menu elements, for both small and normal screens-->
+				<div id="collapsable-nav" class="collapse navbar-collapse " >
+						<!-- creating list of menu items with id for customization, adding class so bootstrap knows that the items are the part of drop down menu-->
+			           <ul id="nav-list" class="navbar-nav ml-auto">
+			           	<!-- click go to designated pages. adding icons using <i> and fas class (to get icon from the font site)-->
+				            	<!-- we have a line break if on big screens, and remove for small ones-->
+				            <li>
+				              <a href="menu-categories.html">
+				                <i class="fas fa-utensils"></i><br class="d-none d-md-block"> &nbsp;Our&nbsp;Menu</a> <!--non-breaking space to prevent it from going to a new line, no idea why it does that-->
+				            </li>
+				            <li>
+				              <a href="#">
+				                <i class="fas fa-info-circle"></i><br class="d-none d-md-block"> &nbsp;About&nbsp;Us</a>
+				            </li>
+				            <li>
+				              <a href="#">
+				                <i class="fas fa-biohazard"></i><br class="d-none d-md-block"> &nbsp;Health&nbsp;Risk</a>
+				            </li>
+				            <li id="phone" class="d-none d-md-block">
+				              <a href="tel:410-602-5008">
+				                <span>410-602-5008</span></a><div>* We Deliver</div>
+				            </li>
+			          </ul><!-- #nav-list -->
+			    </div><!-- .collapse .navbar-collapse -->
 
-			</div>
+				
+			</div> <!--container-->
 
 		</nav>
-
+	
 	</header>
 
 
@@ -62,5 +95,7 @@
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/script.js"></script>
+
 </body>
+
 </html>
